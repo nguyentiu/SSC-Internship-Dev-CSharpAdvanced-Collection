@@ -12,7 +12,7 @@ Trong bài viết này, chúng ta sẽ tìm hiểu các loại collection phổ 
 - Queue (Hàng đợi)
 - List
 ## 2. ArrayList
-ArrayList là một collection cho phép lưu trữ các phần tử mà không cần xác định trước kích thước của nó. Các phần tử trong ArrayList có thể có các kiểu dữ liệu khác nhau.
+`ArrayList` là một collection cho phép lưu trữ các phần tử mà không cần xác định trước kích thước của nó. Các phần tử trong `ArrayList` có thể có các kiểu dữ liệu khác nhau.
 
 - Các Thuộc Tính Chính
   - Count: Trả về số phần tử có trong ArrayList.
@@ -25,7 +25,7 @@ ArrayList là một collection cho phép lưu trữ các phần tử mà không 
   - Contains(object value): Kiểm tra xem ArrayList có chứa một phần tử cụ thể không.
 Ví Dụ Minh Họa
 ```csharp
-Copy code
+
 using System;
 using System.Collections;
 
@@ -60,14 +60,15 @@ class Program
     }
 }
 ```
+Trong ví dụ trên, chúng ta khởi tạo một `ArrayList` và thêm các phần tử với các kiểu dữ liệu khác nhau. `ArrayList` linh hoạt nhưng không an toàn về kiểu dữ liệu, vì vậy nếu bạn biết trước kiểu dữ liệu sẽ được lưu trữ, hãy cân nhắc sử dụng `List<T>`.
 ## 3. HashTable
-HashTable là một collection lưu trữ dữ liệu dưới dạng các cặp khóa-giá trị (key-value). Các phần tử trong HashTable được truy xuất thông qua khóa của chúng.
+`HashTable` là một collection lưu trữ dữ liệu dưới dạng các cặp khóa-giá trị (key-value). Các phần tử trong `HashTable` được truy xuất thông qua khóa của chúng.
 
 - Các Thuộc Tính Chính
   - Count: Trả về số cặp khóa-giá trị có trong HashTable.
   - Keys: Trả về một tập hợp chỉ đọc các khóa trong HashTable.
   - Values: Trả về một tập hợp chỉ đọc các giá trị trong HashTable.
-Các Phương Thức Chính
+- Các Phương Thức Chính
   - Add(object key, object value): Thêm một cặp khóa-giá trị vào HashTable.
   - Remove(object key): Xóa cặp khóa-giá trị tương ứng với khóa được chỉ định.
   - ContainsKey(object key): Kiểm tra xem HashTable có chứa khóa cụ thể không.
@@ -75,7 +76,7 @@ Các Phương Thức Chính
   - Clear(): Xóa tất cả các cặp khóa-giá trị khỏi HashTable.
 Ví Dụ Minh Họa
 ```csharp
-Copy code
+
 using System;
 using System.Collections;
 
@@ -106,8 +107,9 @@ class Program
     }
 }
 ```
+`HashTable` phù hợp khi bạn cần lưu trữ và truy xuất dữ liệu dựa trên một khóa duy nhất.
 ## 4. SortedList
-SortedList cũng là một collection lưu trữ dữ liệu dưới dạng các cặp khóa-giá trị, nhưng khác với HashTable, nó lưu trữ các cặp này theo thứ tự tăng dần của khóa.
+`SortedList` cũng là một collection lưu trữ dữ liệu dưới dạng các cặp khóa-giá trị, nhưng khác với `HashTable`, nó lưu trữ các cặp này theo thứ tự tăng dần của khóa.
 
 - Các Thuộc Tính Chính
   - Count: Trả về số cặp khóa-giá trị có trong SortedList.
@@ -121,7 +123,7 @@ SortedList cũng là một collection lưu trữ dữ liệu dưới dạng các
   - Clear(): Xóa tất cả các cặp khóa-giá trị khỏi SortedList.
 Ví Dụ Minh Họa
 ```csharp
-Copy code
+
 using System;
 using System.Collections;
 
@@ -152,8 +154,9 @@ class Program
     }
 }
 ```
+`SortedList` hữu ích khi bạn cần lưu trữ dữ liệu dưới dạng các cặp key-value và yêu cầu thứ tự sắp xếp của các khóa.
 ## 5. Stack - Ngăn Xếp
-Stack là một collection tuân theo nguyên tắc LIFO (Last In, First Out), nghĩa là phần tử cuối cùng được thêm vào sẽ là phần tử đầu tiên được lấy ra.
+`Stack` là một collection tuân theo nguyên tắc LIFO (Last In, First Out), nghĩa là phần tử cuối cùng được thêm vào sẽ là phần tử đầu tiên được lấy ra.
 
 - Các Thuộc Tính Chính
   - Count: Trả về số phần tử có trong Stack.
@@ -165,7 +168,7 @@ Stack là một collection tuân theo nguyên tắc LIFO (Last In, First Out), n
   - Clear(): Xóa tất cả các phần tử khỏi Stack.
 Ví Dụ Minh Họa
 ```csharp
-Copy code
+
 using System;
 using System.Collections;
 
@@ -199,8 +202,9 @@ class Program
     }
 }
 ```
+`Stack` thường được sử dụng trong các thuật toán như duyệt cây hoặc thực hiện quay lui (backtracking).
 ## 6. Queue - Hàng Đợi
-Queue là một collection tuân theo nguyên tắc FIFO (First In, First Out), nghĩa là phần tử đầu tiên được thêm vào sẽ là phần tử đầu tiên được lấy ra.
+`Queue` là một collection tuân theo nguyên tắc FIFO (First In, First Out), nghĩa là phần tử đầu tiên được thêm vào sẽ là phần tử đầu tiên được lấy ra.
 - Các Thuộc Tính Chính
   - Count: Trả về số phần tử có trong Queue.
 - Các Phương Thức Chính
@@ -211,7 +215,7 @@ Queue là một collection tuân theo nguyên tắc FIFO (First In, First Out), 
   - Clear(): Xóa tất cả các phần tử khỏi Queue.
 Ví Dụ Minh Họa
 ```csharp
-Copy code
+
 using System;
 using System.Collections;
 
@@ -245,3 +249,67 @@ class Program
     }
 }
 ```
+`Queue` thường được sử dụng trong các tình huống như hàng đợi xử lý dữ liệu, hàng đợi yêu cầu trong mạng.
+## 7. List
+`List` là một collection kiểu generic, cho phép lưu trữ các phần tử theo kiểu dữ liệu cụ thể. `List` cung cấp các phương thức mạnh mẽ để thêm, xóa và tìm kiếm các phần tử.
+
+- Các Thuộc Tính Chính
+  - Count: Trả về số phần tử có trong List.
+  - Capacity: Lấy hoặc đặt số lượng phần tử mà List có thể chứa.
+  - Item[int index]: Truy cập phần tử tại chỉ số xác định.
+- Các Phương Thức Chính
+  - Add(T item): Thêm một phần tử vào cuối của List.
+  - Remove(T item): Xóa phần tử đầu tiên khớp với giá trị được chỉ định.
+  - Insert(int index, T item): Thêm một phần tử vào List tại chỉ số xác định.
+  - Clear(): Xóa tất cả các phần tử khỏi List.
+  - Contains(T item): Kiểm tra xem List có chứa một phần tử cụ thể không.
+  - IndexOf(T item): Trả về chỉ số của phần tử đầu tiên khớp với giá trị được chỉ định.
+  - RemoveAt(int index): Xóa phần tử tại chỉ số xác định.
+  - Sort(): Sắp xếp các phần tử trong List.
+Ví Dụ Minh Họa
+```csharp
+
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<string> list = new List<string>();
+        list.Add("Apple");
+        list.Add("Banana");
+        list.Add("Cherry");
+
+        Console.WriteLine("Initial List:");
+        foreach (var item in list)
+        {
+            Console.WriteLine(item);
+        }
+
+        list.Remove("Banana"); // Xóa phần tử "Banana"
+        Console.WriteLine("\nList after removing 'Banana':");
+        foreach (var item in list)
+        {
+            Console.WriteLine(item);
+        }
+
+        list.Insert(1, "Blueberry"); // Chèn "Blueberry" vào vị trí chỉ số 1
+        Console.WriteLine("\nList after inserting 'Blueberry' at index 1:");
+        foreach (var item in list)
+        {
+            Console.WriteLine(item);
+        }
+
+        list.Sort(); // Sắp xếp danh sách
+        Console.WriteLine("\nSorted List:");
+        foreach (var item in list)
+        {
+            Console.WriteLine(item);
+        }
+    }
+}
+```
+`List<T>` là một lựa chọn phổ biến khi bạn cần một danh sách các phần tử kiểu dữ liệu giống nhau với khả năng thay đổi kích thước tự động.
+## 8. Tổng Kết
+Trong C#, các collections cung cấp những công cụ mạnh mẽ để làm việc với tập hợp dữ liệu. Mỗi loại collection có những đặc điểm và phương thức riêng, cho phép bạn lựa chọn giải pháp phù hợp với nhu cầu của mình.
